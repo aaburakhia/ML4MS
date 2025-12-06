@@ -1,4 +1,9 @@
-theme: jekyll-theme-cayman
-title: ML4MS Initiative
-description: Machine Learning for Materials Science (Engineering Focus)
+title: ML4MS
+description: Machine Learning for Materials Science
+theme: jekyll-theme-tactile
 show_downloads: false
+google_analytics: 
+permalink: /:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
