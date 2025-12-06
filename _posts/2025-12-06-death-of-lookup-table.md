@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "The Death of the Lookup Table: Understanding MACE & M3GNet"
-date:   2025-12-20
+date:   2025-12-06
 categories: [Simulation, Physics-AI, Asset Integrity]
 ---
 
