@@ -2,66 +2,93 @@
 ---
 @import "{{ site.theme }}";
 
-/* 1. LAYOUT: MAKE IT WIDE */
-.wrapper {
-    max-width: 1200px !important; /* Widen the container */
-    width: 95% !important;
-    padding: 20px;
-}
+/* =========================================
+   1. LAYOUT RESET (Fixing the Floating Issue)
+   ========================================= */
 
-section {
+/* Force the Header to be a Top Bar, not a Sidebar */
+header {
     width: 100% !important;
     max-width: 100% !important;
-}
-
-/* 2. COLORS: PROFESSIONAL ENGINEERING LOOK */
-body {
-    background-color: #f4f6f8; /* Light gray background (Modern) */
-    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    color: #2c3e50; /* Dark Slate (Not pure black) */
-}
-
-/* 3. HEADER: CORPORATE BLUE */
-header {
-    background-color: #003366 !important; /* Navy Blue */
+    position: relative !important;
+    float: none !important;
+    padding: 40px 0 !important;
+    margin: 0 !important;
+    text-align: center;
+    
+    /* Corporate Branding Colors */
+    background-color: #003366 !important; /* Halliburton/Schlumberger Navy */
     background-image: none !important;
-    border-bottom: 4px solid #b31b1b; /* Red Accent Line */
-    padding: 30px 0;
+    border-bottom: 5px solid #b31b1b;     /* Engineering Red Accent */
 }
 
+/* Force the Content to be Centered and Wide */
+section {
+    width: 90% !important;
+    max-width: 1000px !important;  /* Ideal reading width */
+    margin: 40px auto !important;  /* Center the block */
+    float: none !important;
+    padding: 0 !important;
+}
+
+/* Force the Footer to the bottom */
+footer {
+    width: 100% !important;
+    float: none !important;
+    position: relative !important;
+    margin: 50px 0 0 0 !important;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
+/* =========================================
+   2. COLOR & TYPOGRAPHY FIXES
+   ========================================= */
+
+body {
+    background-color: #ffffff;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+/* Fix the Header Text (Make it Readable) */
 header h1 {
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 2.5em;
-    color: #ffffff !important;
-    margin-bottom: 10px;
+    font-size: 2.8em !important;
+    color: #ffffff !important; /* Pure White Text */
+    margin-bottom: 10px !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 header p {
-    font-size: 1.2em;
-    color: #e0e0e0 !important;
+    font-size: 1.3em !important;
+    color: #e0e0e0 !important; /* Light Grey Subtitle */
+    opacity: 1 !important;
 }
 
-/* 4. TYPOGRAPHY & CARDS */
+/* Hide the ugly default download buttons */
+header ul {
+    display: none !important;
+}
+
+/* Professional Headings in the Article */
 h1, h2, h3 {
-    color: #003366; /* Match header blue */
-    font-weight: 600;
+    color: #003366;
+    margin-top: 1.5em;
 }
 
-/* Make links look like buttons or clean text */
+/* Links */
 a {
     color: #0056b3;
     text-decoration: none;
-    font-weight: 500;
 }
 a:hover {
     text-decoration: underline;
 }
 
-/* 5. BOXES FOR ARTICLES (Card Style) */
-hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-    margin: 40px 0;
+/* Code Blocks (cleaner look) */
+pre {
+    background: #f6f8fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
