@@ -1,0 +1,67 @@
+---
+---
+@import "{{ site.theme }}";
+
+/* 1. LAYOUT: MAKE IT WIDE */
+.wrapper {
+    max-width: 1200px !important; /* Widen the container */
+    width: 95% !important;
+    padding: 20px;
+}
+
+section {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* 2. COLORS: PROFESSIONAL ENGINEERING LOOK */
+body {
+    background-color: #f4f6f8; /* Light gray background (Modern) */
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #2c3e50; /* Dark Slate (Not pure black) */
+}
+
+/* 3. HEADER: CORPORATE BLUE */
+header {
+    background-color: #003366 !important; /* Navy Blue */
+    background-image: none !important;
+    border-bottom: 4px solid #b31b1b; /* Red Accent Line */
+    padding: 30px 0;
+}
+
+header h1 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 2.5em;
+    color: #ffffff !important;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #e0e0e0 !important;
+}
+
+/* 4. TYPOGRAPHY & CARDS */
+h1, h2, h3 {
+    color: #003366; /* Match header blue */
+    font-weight: 600;
+}
+
+/* Make links look like buttons or clean text */
+a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* 5. BOXES FOR ARTICLES (Card Style) */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
