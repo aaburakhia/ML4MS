@@ -1,9 +1,7 @@
 title: ML4MS
 description: Machine Learning for Materials Science
-theme: jekyll-theme-tactile
+theme: jekyll-theme-minimal
+logo: https://img.icons8.com/ios-filled/50/ffffff/microscope.png
 show_downloads: false
 google_analytics: 
 permalink: /:year/:month/:day/:title/
-
-markdown: kramdown
-highlighter: rouge
