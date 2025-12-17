@@ -5,3 +5,4 @@ logo: https://img.icons8.com/ios-filled/50/ffffff/microscope.png
 show_downloads: false
 google_analytics: 
 permalink: /:year/:month/:day/:title/
+future: true
