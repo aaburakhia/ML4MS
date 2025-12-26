@@ -96,11 +96,44 @@
         <p>Managed by Ahmed Aburakhia | Senior Materials Engineer</p>
         <p><a href="https://github.com/aaburakhia">View GitHub Profile</a></p>
     </footer>
-
-        <!-- ACTIVATE MERMAID DIAGRAMS -->
+<!-- ACTIVATE MERMAID DIAGRAMS -->
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({ startOnLoad: true });
+        mermaid.initialize({ startOnLoad: false });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Search for any element that has 'language-mermaid' in its class
+            // This catches both <code class="language-mermaid"> and <div class="language-mermaid">
+            const mermaidBlocks = document.querySelectorAll('.language-mermaid');
+
+            mermaidBlocks.forEach((block) => {
+                // 1. Capture the graph definition text
+                const graphDefinition = block.innerText;
+
+                // 2. Create the div that Mermaid library expects
+                const mermaidDiv = document.createElement('div');
+                mermaidDiv.className = 'mermaid';
+                mermaidDiv.textContent = graphDefinition;
+
+                // 3. Find the outer container to replace
+                // (Jekyll creates nested divs like <div class="highlighter"><pre><code>)
+                // We want to replace the whole grey box with the diagram.
+                let container = block;
+                
+                // If we found the inner code tag, climb up to the main container
+                if (block.tagName === 'CODE' || block.tagName === 'PRE') {
+                    container = block.closest('div.language-mermaid') || block.closest('div.highlighter-rouge') || block.parentElement;
+                }
+
+                // 4. Swap them
+                if (container && container.parentNode) {
+                    container.parentNode.replaceChild(mermaidDiv, container);
+                }
+            });
+
+            // 5. Tell Mermaid to draw
+            mermaid.run();
+        });
     </script>
 </body>
 </html>
