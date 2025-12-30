@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Beyond FEA: Solving the 'Small Data' Problem with Physics-Informed AI"
-date:   2025-01-30
+date:   2025-12-29
 categories: [Simulation, Digital Twins, PINNs, Asset Integrity]
 ---
 
